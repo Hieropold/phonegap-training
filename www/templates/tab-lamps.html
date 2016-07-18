@@ -1,0 +1,18 @@
+<ion-view view-title="Lamps">
+  <ion-content class="padding">
+
+    <p>Press Scan button to get info about a lamp using its barcode.</p>
+
+    <button class="button button-positive button-bar" ng-click="scanBarcode()">
+      <span class="ion-ios-barcode-outline"></span>
+      &nbsp;&nbsp;Scan
+    </button>
+
+    <div class="lamp" ng-if="lamp">
+      <div>Brand: {{lamp.brand}}</div>
+      <div>Model: {{lamp.model}}</div>
+      <div>Tzokol: {{lamp.base_type}}</div>
+    </div>
+
+  </ion-content>
+</ion-view>

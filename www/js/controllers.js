@@ -25,4 +25,17 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+
+.controller('LampsCtrl', function ($scope, Lamps) {
+  
+  $scope.lamp = false;
+
+  $scope.scanBarcode = function () {
+    
+    var barcode = '0043168179294';
+    
+    $scope.lamp = Lamps.getByBarcode(barcode);
+  };
+
 });

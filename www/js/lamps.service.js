@@ -5,15 +5,17 @@
 	function Lamps() {
 		var service = this;
 
-		service.getByUPC = getByUPC;
+		service.getByBarcode = getByBarcode;
 
-		function getByUPC(upc) {
-			if (angular.isDefined(lampDB[upc])) {
-				return lampDB[upc];
+		function getByBarcode(code) {
+			if (angular.isDefined(lampDB[code])) {
+				return lampDB[code];
 			}
 
 			return false;
 		}
+
+		return service;
 	}
 
 })(angular, lampDB);

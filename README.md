@@ -24,4 +24,5 @@ Create a service which will be using this data.
 # Links
 - https://screeps.com/
 - http://ionicframework.com/getting-started/
+- http://ionicons.com/
 - https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
