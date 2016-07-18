@@ -21,6 +21,13 @@ converted it into JSON to save us some time.
 
 Create a service which will be using this data.
 
+Create simple controller and view with button Scan which initiate barcode scanner, and
+search local DB for a lamp etnry corresponding to a scanned barcode.
+
+# Add barcode scanner plugin
+
+ionic plugin add phonegap-plugin-barcodescanner
+
 # Links
 - https://screeps.com/
 - http://ionicframework.com/getting-started/

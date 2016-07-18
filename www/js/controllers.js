@@ -32,6 +32,32 @@ angular.module('starter.controllers', [])
   $scope.lamp = false;
 
   $scope.scanBarcode = function () {
+
+    if (typeof cordova === 'undefined' || !cordova.plugins || !cordova.plugins.barcodeScanner) {
+      alert('Barcode scanner is required');
+      return;
+    }
+
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+          if (result.text) {
+            $scope.lamp = Lamps.getByBarcode(result.text);
+
+            if (!$scope.lamp) {
+              alert('Nothing found in the local DB');
+            }
+          }
+
+        },
+        function (error) {
+          alert("Scanning failed: " + error);
+        },
+        {
+          "preferFrontCamera" : true, // iOS and Android
+          "showFlipCameraButton" : true, // iOS and Android
+          "prompt" : "Place a barcode inside the scan area" // supported on Android only
+        }
+    );
     
     var barcode = '0043168179294';
     
