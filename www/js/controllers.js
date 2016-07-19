@@ -28,7 +28,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('LampsCtrl', function ($scope, Lamps) {
-  
+
   $scope.lamp = false;
 
   $scope.scanBarcode = function () {
@@ -48,6 +48,7 @@ angular.module('starter.controllers', [])
             }
           }
 
+          $scope.$apply();
         },
         function (error) {
           alert("Scanning failed: " + error);
@@ -58,10 +59,6 @@ angular.module('starter.controllers', [])
           "prompt" : "Place a barcode inside the scan area" // supported on Android only
         }
     );
-    
-    var barcode = '0043168179294';
-    
-    $scope.lamp = Lamps.getByBarcode(barcode);
   };
 
 });

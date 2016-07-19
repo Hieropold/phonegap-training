@@ -8,6 +8,9 @@
 		service.getByBarcode = getByBarcode;
 
 		function getByBarcode(code) {
+
+		  code = code.toString();
+
 			if (angular.isDefined(lampDB[code])) {
 				return lampDB[code];
 			}

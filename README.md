@@ -28,6 +28,14 @@ search local DB for a lamp etnry corresponding to a scanned barcode.
 
 ionic plugin add phonegap-plugin-barcodescanner
 
+# Testing
+
+Valid barcodes:
+
+- 4895117846346 - Camelion
+- 4607136943872 - Navigator
+- 0030142322858 - IKEA
+
 # Links
 - https://screeps.com/
 - http://ionicframework.com/getting-started/
